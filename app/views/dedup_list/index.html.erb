@@ -1,0 +1,24 @@
+
+<div class="row">
+
+  <%= form_tag dedup_list_path, method: 'post', authenticity_token: true, remote: true, class:"form-horizontal", role:"form"  do %>
+
+    <div class="form-group">
+      <textarea name="text" id="text" class="form-control" cols="30" rows="5" 
+                placeholder="Please list each email address on a separate line" ></textarea>
+    </div>
+    
+    <!-- TODO insert file upload button -->
+    <%#= render :partial => "file_upload_btn" %> 
+
+    <div class="form-group">
+      <input type="submit" name="commit" value="Go" class="btn btn-success" />
+    </div>
+  <% end %>
+</div>
+
+
+<div id="results">
+  <%=h(@errors) if @errors%>
+</div> 
+

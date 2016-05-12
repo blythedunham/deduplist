@@ -1,0 +1,15 @@
+
+<% if @error %>
+  <div class="alert alert-danger"><%= h @error %></div>
+<% elsif @results.blank? %>
+  <div class="alert alert-warning">No results found</div>
+<% else %>
+  <br/>
+  <h3> Results </h3>
+  <div class="alert alert-success">
+     <%= "Found " + pluralize(@results.count, 'unique item') + "." %>
+  </div>
+  <% @results.each do |result| %>
+    <div class="row"><%= h result %></div>
+  <% end %>  
+<% end %>

@@ -1,0 +1,12 @@
+    OR<br/>
+
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <span class="btn btn-default" onclick="$(this).parent().find('input[type=file]').click();">Choose File</span>
+          <input name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file">
+        </span>
+        <span class="form-control"></span>
+      </div>
+    </div>
+    
